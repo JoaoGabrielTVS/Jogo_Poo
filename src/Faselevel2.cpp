@@ -49,7 +49,7 @@ unsigned Faselevel2::run(SpriteBuffer &screen)
               heroi->moveUp(1);
               heroi->moveLeft(3);}
             else{
-                heroi->moveLeft(3);
+                heroi->moveLeft(5);
             }
         }
         
@@ -58,7 +58,7 @@ unsigned Faselevel2::run(SpriteBuffer &screen)
                 heroi->moveDown(1);
                 heroi->moveRight(3);}
               else{
-                  heroi->moveRight(3);
+                  heroi->moveRight(5);
               }
 
         

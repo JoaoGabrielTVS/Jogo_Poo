@@ -238,7 +238,7 @@ unsigned FaseLevel1::run(SpriteBuffer &screen)
         //fim part2
         //Inicio da part3
         //logica de movimentaçãao dos personagens
-        if( heroi->colideComBordas(*tapete3) && Caveira_Espada[0]->info_vivo()== true && Caveira_Espada[1]->info_vivo()==true && Caveira_Espada[5]->info_vivo()==true){
+        if(heroi->colideComBordas(*tapete3) && Caveira_Espada[0]->info_vivo()== true && Caveira_Espada[1]->info_vivo()==true && Caveira_Espada[5]->info_vivo()==true){
             Caveira_Espada[0]->info_vivo();
             
             if(!Caveira_Espada[0]->colideComBordas(*tapete3)||!Caveira_Espada[1]->colideComBordas(*tapete3)||!Caveira_Espada[5]->colideComBordas(*tapete3)){
@@ -257,7 +257,7 @@ unsigned FaseLevel1::run(SpriteBuffer &screen)
         }
         //logica de combate
          //logica de combate do inimigo espada
-         if((Caveira_Espada[0]->info_vivo()==true || Caveira_Espada[1]->info_vivo()== true ||  Caveira_Espada[5]->info_vivo()== true) && heroi->info_vivo()==true && heroi->colideComBordas(*tapete3)){
+         if(ent == "e" &&(Caveira_Espada[0]->info_vivo()==true || Caveira_Espada[1]->info_vivo()== true ||  Caveira_Espada[5]->info_vivo()== true) && heroi->info_vivo()==true && heroi->colideComBordas(*tapete3)){
            
             
                     Caveira_Espada[0]->Tirar_Vida(5);
@@ -307,7 +307,7 @@ unsigned FaseLevel1::run(SpriteBuffer &screen)
                     }        
                     
                     flecha->moveRight(7);
-                    if(heroi->colideComBordas(*Caveira_Arqueira[0])){
+                    if(ent == "e" && heroi->colideComBordas(*Caveira_Arqueira[0])){
                         Caveira_Arqueira[0]->Tirar_Vida(5);
 
                     }

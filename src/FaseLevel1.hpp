@@ -1,6 +1,6 @@
 #ifndef FASELEVEL1_HPP
 #define FASELEVEL1_HPP
-
+#include "Keyboard.hpp"
 #include "../ASCII_Engine/Fase.hpp"
 #include <string>
 #include <list>

@@ -33,9 +33,13 @@ public:
 		fase2.init();
 		fase2.run(buffer);
 		buffer.clear();
-                                                 
+        /*
+		Faselevel2 fase2("Fase",Sprite("rsc/Vitoria.img",COR::CINZA_ESCURA));
+		fase2.init();
+		fase2.run(buffer);
+		buffer.clear();                          
 		std::cout << "Saindo..." << std::endl;
-	
+	*/
 }
 };
 
