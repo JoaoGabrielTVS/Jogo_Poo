@@ -108,6 +108,7 @@ unsigned FaseLevel1::run(SpriteBuffer &screen)
         //logica movimentaação da aranha
         if(!aranha->colideComBordas(*bau) && aranha->get_objetivo() == false  && heroi->atacar()<=10)
             aranha->moveRight(aranha->getVelocidade());
+
         if(heroi->colideComBordas(*chave)){
             heroi->pegarChave();
             chave->desativarObj();
@@ -130,9 +131,11 @@ unsigned FaseLevel1::run(SpriteBuffer &screen)
             }}
         //logica de combate da aranha
         if(heroi->info_vivo()==true)
-            if(heroi->colideComBordas(*aranha))
+            if(heroi->colideComBordas(*aranha)){
+
                 heroi->tirarvida(aranha->get_ataque());
-                
+                aranha->moveTo(5,aranha->getPosC());
+            }
         if(heroi->info_vivo()== false){
             heroi->desativarObj();
             exit(1);}
@@ -175,7 +178,7 @@ unsigned FaseLevel1::run(SpriteBuffer &screen)
             if(heroi->colideComBordas(*bau)){
                 heroi->set_Ataque(20);
                 aranha->set_objetivo();
-
+                aranha->Set_velocidade(2);
                 bau->desativarObj();
             }
             if(aranha->colideComBordas(*bau)){
@@ -235,7 +238,7 @@ unsigned FaseLevel1::run(SpriteBuffer &screen)
         //fim part2
         //Inicio da part3
         //logica de movimentaçãao dos personagens
-        if(heroi->colideComBordas(*tapete3) && Caveira_Espada[0]->info_vivo()== true && Caveira_Espada[1]->info_vivo()==true && Caveira_Espada[5]->info_vivo()==true){
+        if( heroi->colideComBordas(*tapete3) && Caveira_Espada[0]->info_vivo()== true && Caveira_Espada[1]->info_vivo()==true && Caveira_Espada[5]->info_vivo()==true){
             Caveira_Espada[0]->info_vivo();
             
             if(!Caveira_Espada[0]->colideComBordas(*tapete3)||!Caveira_Espada[1]->colideComBordas(*tapete3)||!Caveira_Espada[5]->colideComBordas(*tapete3)){

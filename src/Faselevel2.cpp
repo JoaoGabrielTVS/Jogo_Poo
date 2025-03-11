@@ -81,7 +81,7 @@ unsigned Faselevel2::run(SpriteBuffer &screen)
            
             }
 
-        if(get_counter() == 25){
+        if(get_counter() == 40){
             std::cout << "entrou";
             bola = new ObjetoDeJogo("fase1",Sprite("rsc/fogo.img",COR::VERMELHA),76,110);
             objs.push_back(bola);
@@ -89,7 +89,7 @@ unsigned Faselevel2::run(SpriteBuffer &screen)
         
 
     
-        if(get_counter() > 25){
+        if(get_counter() > 40){
             reiniciar_counter();
         }
 
