@@ -12,6 +12,8 @@ class FaseLevel1:public Fase{
     public:
         FaseLevel1(std::string name, const Sprite &bkg):Fase(name, bkg){}
         FaseLevel1(std::string name, const SpriteAnimado &bkg):Fase(name, bkg){}
+        bool colideComBloco() const;
+
         virtual ~FaseLevel1(){}
         virtual void init();
         virtual unsigned run(SpriteBuffer &screen);
@@ -32,7 +34,12 @@ class FaseLevel1:public Fase{
         ObjetoDeJogo *tapete2;
         ObjetoDeJogo *tapete3;
         ObjetoDeJogo *flecha;
-        ObjetoDeJogo *coracao[10];
+        ObjetoDeJogo *fase1_[5];
+        ObjetoDeJogo *fissura;
+        ObjetoDeJogo *coracao;
+        ObjetoDeJogo *vida;
+        std::list<ObjetoDeJogo*> colisoes;
+
 };
 
 

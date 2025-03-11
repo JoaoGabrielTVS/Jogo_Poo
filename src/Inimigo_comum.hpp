@@ -7,7 +7,7 @@
 class Inimigo_comum: public Inimigo
 {
     public:
-        Inimigo_comum(const ObjetoDeJogo &obj , int life =60, int velAtaque =5):Inimigo(obj), life(life), velAtaque(velAtaque), contAtaque(velAtaque){}
+        Inimigo_comum(const ObjetoDeJogo &obj , int life =100, int velAtaque =5):Inimigo(obj), life(life), velAtaque(velAtaque), contAtaque(velAtaque){}
         virtual ~Inimigo_comum(){}
         bool info_vivo() const {return life != 0;}
      

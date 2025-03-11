@@ -22,8 +22,8 @@ namespace COR
 	extern const char *const CINZA_ESCURA;
 	extern const char *const CIANO;
 	extern const char *const MAGENTA;
-	
-	
+	extern const char *const TURQUESA;
+	extern const char *const VERMELHO_C;
 	//declare mais cores aqui...
 }
 

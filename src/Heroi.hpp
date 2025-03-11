@@ -6,7 +6,7 @@
 class Heroi :public ObjetoDeJogo
 {
 public:
-    Heroi(const ObjetoDeJogo &obj , int life = 200):ObjetoDeJogo(obj),life(life), bomba(false),ataque(10){}
+    Heroi(const ObjetoDeJogo &obj , int life = 3000):ObjetoDeJogo(obj),life(life), bomba(false),ataque(10){}
     virtual ~Heroi()	{}
     bool info_vivo() const {return life != 0;}
     int getLife() const {return life;}
@@ -14,6 +14,7 @@ public:
         life = (life - ataque >= 0)?(life - ataque) : 0;
 
     }
+    
     void setvel (int vel){
         this->vel = vel;
     }
@@ -31,7 +32,7 @@ public:
 
 private: 
     int life;
-    bool bomba;
+    bool bomba=false;
     int vel;
     int ataque;
 

@@ -8,16 +8,22 @@
 class Aranha: public Inimigo
 {
     public:
-        Aranha(const ObjetoDeJogo &obj , int velAtaque =3):Inimigo(obj , velAtaque),velocidade(4),objetivo(false),ataque(30){}
-        virtual ~Aranha(){
+        Aranha(const ObjetoDeJogo &obj , int velAtaque =3):Inimigo(obj , velAtaque),velocidade(3),objetivo(false),ataque(30){
             std::random_device rd;  
             std::mt19937 gen(rd());
             std::uniform_int_distribution<> dist(1, 100);
             if(dist(gen)>80){
-                objetivo = !objetivo;
-            }
+            objetivo = !objetivo;}
+        }
+        virtual ~Aranha(){
+         
 
         }
+        void pensando(){
+            
+        }
+
+
         int get_ataque(){
             return ataque; 
         }
@@ -31,6 +37,9 @@ class Aranha: public Inimigo
             objetivo = !objetivo;
             
             
+        }
+        void set_ataque(){
+            this->ataque = 1000;
         }
         bool get_objetivo(){
             return objetivo;
